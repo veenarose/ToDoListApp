@@ -8,13 +8,14 @@
 
     <TextView android:text="@string/All_Task_List" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ff4162"
+        android:textColor="#ff497f"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
 
     <Button
         android:layout_width="wrap_content"
@@ -41,5 +42,14 @@
         android:layout_marginEnd="39dp"
         android:textColor="#8438ff"
         android:singleLine="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView"
+        android:layout_above="@+id/button" />
 
 </RelativeLayout>

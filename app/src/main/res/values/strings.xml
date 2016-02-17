@@ -6,4 +6,13 @@
     <string name="All_Task_List">All Task List</string>
     <string name="Add_Task">Add Task</string>
     <string name="Filtered_View">Filtered View</string>
+    <string name="title_activity_create_or_edit_task">CreateOrEditTask</string>
+    <string name="Create_Or_Edit_Task">Create or Edit Task</string>
+    <string name="Enter_Task_Name">Task Name</string>
+    <string name="Task_State">Task State</string>
+    <string name="Active">Active</string>
+    <string name="In_Progress">In Progress</string>
+    <string name="Completed">Completed</string>
+    <string name="SaveTask">Save Task</string>
+    <string name="Delete_Task">Delete Task</string>
 </resources>
