@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="All_Task_List">All Task List</string>
+    <string name="Add_Task">Add Task</string>
+    <string name="Filtered_View">Filtered View</string>
 </resources>
