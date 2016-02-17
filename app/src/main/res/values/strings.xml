@@ -15,4 +15,8 @@
     <string name="Completed">Completed</string>
     <string name="SaveTask">Save Task</string>
     <string name="Delete_Task">Delete Task</string>
+    <string name="List_ID">ID</string>
+    <string name="List_TaskName" />
+    <string name="list_TaskName" />
+    <string name="list_TaskID" />
 </resources>

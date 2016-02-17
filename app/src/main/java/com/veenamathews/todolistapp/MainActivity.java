@@ -15,8 +15,17 @@ import android.widget.SimpleCursorAdapter;
 public class MainActivity extends AppCompatActivity {
     public final static String KEY_EXTRA_CONTACT_ID = "KEY_EXTRA_CONTACT_ID";
 
+   public static MainActivity singleton = new MainActivity();
+
+
     private ListView listView;
-    DataBase dataBase;
+    public static DataBase dataBase;
+
+
+    public static MainActivity getInstance(){
+        return singleton;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 DataBase.COLUMN_TITLE
         };
         int[] widgets = new int[]{
-
+                R.id.list_TaskID,
+                R.id.list_TaskName
         };
 
-        SimpleCursorAdapter cursorAdapter = new SimpleCursorAdapter(this, R.layout.tasks_layout,
+        SimpleCursorAdapter cursorAdapter = new SimpleCursorAdapter(this, R.layout.listitem2,
                 cursor, columns, widgets, 0);
 
         listView = (ListView) findViewById(R.id.listView);

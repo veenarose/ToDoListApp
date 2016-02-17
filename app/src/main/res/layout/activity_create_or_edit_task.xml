@@ -98,7 +98,10 @@
         android:layout_marginLeft="36dp"
         android:layout_marginStart="36dp"
         android:textColor="#8438ff"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:contextClickable="true"
+        android:clickable="true"
+        android:onClick="onClickSaveButton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -111,6 +114,9 @@
         android:layout_alignRight="@+id/editText"
         android:layout_alignEnd="@+id/editText"
         android:layout_marginRight="31dp"
-        android:layout_marginEnd="31dp" />
+        android:layout_marginEnd="31dp"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:onClick="onClickDeleteButton" />
 
 </RelativeLayout>
