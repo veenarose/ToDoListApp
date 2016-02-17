@@ -1,8 +1,10 @@
 package com.veenamathews.todolistapp;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,11 +14,23 @@ import android.widget.Toast;
 
 
 public class CreateOrEditTask extends AppCompatActivity {
+    private static final String TAG = "To Do List App";
 
+    int taskID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_or_edit_task);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+         if (bundle != null){
+            taskID = bundle.getInt("KEY_EXTRA_CONTACT_ID");
+         }
+        Log.i(TAG, "The Task ID is: " + taskID);
+        if (taskID > 0){
+            overrideExistingTask();
+        }
+
     }
 
     @Override
@@ -24,6 +38,19 @@ public class CreateOrEditTask extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_create_or_edit_task, menu);
         return true;
+    }
+
+    public void overrideExistingTask() {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        Cursor rs = MainActivity.dataBase.getTask(taskID);
+        rs.moveToFirst();
+        String taskName = rs.getString(rs.getColumnIndex(DataBase.COLUMN_TITLE));
+        String taskState = rs.getString(rs.getColumnIndex(DataBase.COLUMN_STATE));
+        EditText taskNameField = (EditText)findViewById(R.id.editText);
+        taskNameField.setText(taskName);
+        if (!rs.isClosed()) {
+            rs.close();
+        }
     }
 
     public void onClickSaveButton(View view) {
