@@ -2,6 +2,7 @@ package com.veenamathews.todolistapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -57,5 +58,28 @@ public class DataBase extends SQLiteOpenHelper {
         contentValues.put(COLUMN_STATE, state);
         db.update(TABLE_NAME, contentValues, COLUMN_ID + " = ? ", new String[]{Integer.toString(id)});
         return true;
+    }
+
+    // Delete Task
+    public Integer deletePerson(Integer id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME,
+                COLUMN_ID + " = ? ",
+                new String[] { Integer.toString(id) });
+    }
+
+    // View list 1
+    public Cursor getTask(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery( "SELECT * FROM " + TABLE_NAME + " WHERE " +
+                COLUMN_ID + "=?", new String[] { Integer.toString(id) } );
+        return res;
+    }
+
+    // View list 2
+    public Cursor getAllTasks() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        return res;
     }
 }
