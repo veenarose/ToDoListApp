@@ -51,7 +51,7 @@ public class DataBase extends SQLiteOpenHelper {
     }
 
     // Update Task Method
-    public boolean updatePerson(Integer id, String title, String state) {
+    public boolean updateTask(Integer id, String title, String state) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_TITLE, title);
@@ -61,7 +61,7 @@ public class DataBase extends SQLiteOpenHelper {
     }
 
     // Delete Task
-    public Integer deletePerson(Integer id) {
+    public Integer deleteTask(Integer id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME,
                 COLUMN_ID + " = ? ",

@@ -56,35 +56,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Active"
-        android:id="@+id/radioButton"
+        android:id="@+id/Active"
         android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="38dp"
         android:checked="true"
-        android:textColor="#ff497f" />
+        android:textColor="#ff497f"
+        android:onClick="onClickActive" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/In_Progress"
-        android:id="@+id/radioButton2"
-        android:layout_below="@+id/radioButton"
+        android:id="@+id/In_Progress"
+        android:layout_below="@+id/Active"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:checked="false"
-        android:textColor="#ff497f" />
+        android:textColor="#ff497f"
+        android:onClick="onClickInProgress" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Completed"
-        android:id="@+id/radioButton3"
-        android:layout_below="@+id/radioButton2"
+        android:id="@+id/Completed"
+        android:layout_below="@+id/In_Progress"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:checked="false"
-        android:textColor="#ff497f" />
+        android:textColor="#ff497f"
+        android:onClick="onClickCompleted" />
 
     <Button
         android:layout_width="wrap_content"
