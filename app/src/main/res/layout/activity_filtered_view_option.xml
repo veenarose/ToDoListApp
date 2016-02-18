@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.veenamathews.todolistapp.FilteredViewOption"
+    android:onClick="onClickInProgressList">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active List"
+        android:id="@+id/activeListButton"
+        android:singleLine="true"
+        android:textColor="#8438ff"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onClickActiveList"
+        android:layout_marginBottom="51dp"
+        android:layout_above="@+id/In_Progress_List_Button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In Progress List"
+        android:id="@+id/In_Progress_List_Button"
+        android:singleLine="true"
+        android:textColor="#8438ff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickInProgressList" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed List"
+        android:id="@+id/Completed_List_Button"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/In_Progress_List_Button"
+        android:layout_alignLeft="@+id/In_Progress_List_Button"
+        android:layout_alignStart="@+id/In_Progress_List_Button"
+        android:textColor="#8438ff"
+        android:onClick="onClickCompletedList" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select Filter"
+        android:id="@+id/selectFilter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff497f"
+        android:textStyle="bold" />
+</RelativeLayout>

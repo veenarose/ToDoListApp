@@ -41,7 +41,8 @@
         android:layout_marginRight="39dp"
         android:layout_marginEnd="39dp"
         android:textColor="#8438ff"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:onClick="onClickFIlteredView" />
 
     <ListView
         android:layout_width="wrap_content"

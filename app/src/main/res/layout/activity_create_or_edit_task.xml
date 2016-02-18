@@ -62,8 +62,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="38dp"
         android:checked="true"
-        android:textColor="#ff497f"
-        android:onClick="onClickActive" />
+        android:textColor="#ff497f" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -74,8 +73,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:checked="false"
-        android:textColor="#ff497f"
-        android:onClick="onClickInProgress" />
+        android:textColor="#ff497f" />
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -86,8 +84,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:checked="false"
-        android:textColor="#ff497f"
-        android:onClick="onClickCompleted" />
+        android:textColor="#ff497f" />
 
     <Button
         android:layout_width="wrap_content"

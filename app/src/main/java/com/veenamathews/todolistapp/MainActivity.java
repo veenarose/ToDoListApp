@@ -73,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void onClickFIlteredView(View view){
+        Button filteredView = (Button) findViewById(R.id.button);
+        if (view.getId() == R.id.button2 ) {
+            Intent intent2 = new Intent(MainActivity.this, FilteredViewOption.class);
+            startActivity(intent2);
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

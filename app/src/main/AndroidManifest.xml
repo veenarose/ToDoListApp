@@ -20,6 +20,14 @@
             android:name=".CreateOrEditTask"
             android:label="@string/title_activity_create_or_edit_task" >
         </activity>
+        <activity
+            android:name=".FilteredViewOption"
+            android:label="@string/title_activity_filtered_view_option" >
+        </activity>
+        <activity
+            android:name=".FilteredList"
+            android:label="@string/title_activity_filtered_list" >
+        </activity>
     </application>
 
 </manifest>

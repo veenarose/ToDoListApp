@@ -19,4 +19,6 @@
     <string name="List_TaskName" />
     <string name="list_TaskName" />
     <string name="list_TaskID" />
+    <string name="title_activity_filtered_view_option">FilteredViewOption</string>
+    <string name="title_activity_filtered_list">FilteredList</string>
 </resources>

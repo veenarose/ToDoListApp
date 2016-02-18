@@ -71,8 +71,8 @@ public class DataBase extends SQLiteOpenHelper {
     // View list 1
     public Cursor getTask(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery( "SELECT * FROM " + TABLE_NAME + " WHERE " +
-                COLUMN_ID + "=?", new String[] { Integer.toString(id) } );
+        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " +
+                COLUMN_ID + "=?", new String[]{Integer.toString(id)});
         return res;
     }
 
@@ -80,6 +80,30 @@ public class DataBase extends SQLiteOpenHelper {
     public Cursor getAllTasks() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        return res;
+    }
+
+    // View Active list
+    public Cursor getAllActiveTasks() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery( "SELECT * FROM " + TABLE_NAME + " WHERE " +
+                COLUMN_STATE + "=?", new String[]{"Active"} );
+        return res;
+    }
+
+    // View In Progress list
+    public Cursor getAllInProgressTasks() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery( "SELECT * FROM " + TABLE_NAME + " WHERE " +
+                COLUMN_STATE + "=?", new String[]{"In Progress"} );
+        return res;
+    }
+
+    // View Completed list
+    public Cursor getAllCompletedTasks() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery( "SELECT * FROM " + TABLE_NAME + " WHERE " +
+                COLUMN_STATE + "=?", new String[]{"Completed"} );
         return res;
     }
 }
